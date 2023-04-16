@@ -1,4 +1,4 @@
-# Ke2daira
+# ke2daira.rb
 
 A Ruby implementation of [ke2daira](https://github.com/ryuichiueda/ke2daira)
 
@@ -10,7 +10,6 @@ gem install ke2daira
 
 ## Usage
 
-TODO: Write usage instructions here
 ```ruby
 require "ke2daira"
 
@@ -20,7 +19,7 @@ puts Ke2daira.ke2dairanize("松平 健")
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/otariidae/ke2daira.
+Bug reports and pull requests are welcome on GitHub at https://github.com/otariidae/ke2daira.rb.
 
 ## License
 

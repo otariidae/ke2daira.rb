@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ke2daira (0.1.0)
+    ke2daira (0.2.0)
       suika (~> 0.3.2)
 
 GEM

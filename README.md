@@ -1,5 +1,7 @@
 # ke2daira.rb
 
+[![Gem Version](https://badge.fury.io/rb/ke2daira.svg?icon=si%3Arubygems)](https://badge.fury.io/rb/ke2daira)
+
 A Ruby implementation of [ke2daira](https://github.com/ryuichiueda/ke2daira)
 
 ## Installation

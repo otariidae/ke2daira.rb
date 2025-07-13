@@ -43,18 +43,7 @@ module Ke2daira
     # @return [Array<SuikaToken>]
     def tokenize(sentence)
       raw_tokens = tagger.parse(sentence)
-      raw_tokens.map { |raw_token| raw_token2suikatoken(raw_token) }
-    end
-
-    # Convert Suika raw token to SuikaToken
-    # @param raw_token [String] Suika raw token
-    # @return [SuikaToken]
-    def raw_token2suikatoken(raw_token)
-      surface_form, rest_raw_token = raw_token.split("\t")
-      pos, pos_detail1, pos_detail2, pos_detail3, conjugated_type, conjugated_form,
-        basic_form, reading, pronunciation = rest_raw_token.split(",")
-      SuikaToken.new(surface_form, pos, pos_detail1, pos_detail2, pos_detail3, conjugated_type,
-        conjugated_form, basic_form, reading, pronunciation)
+      raw_tokens.map { |raw_token| SuikaToken.from_raw_token(raw_token) }
     end
 
     # Convert the givin word to its reading

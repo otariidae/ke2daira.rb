@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require_relative "ke2daira/kana2mora"
 require_relative "ke2daira/ke2dairanizer"
 require_relative "ke2daira/version"
 

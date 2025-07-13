@@ -13,7 +13,7 @@ RSpec.describe Ke2daira do
     expect(described_class.ke2dairanize("ポール マッカートニー")).to eq("マール ポッカートニー")
   end
 
-  it "チェ ゲバラ", pending: "モーラ単位でのスワップは未対応" do
+  it "チェ ゲバラ" do
     expect(described_class.ke2dairanize("チェ ゲバラ")).to eq("ゲ チェバラ")
   end
 

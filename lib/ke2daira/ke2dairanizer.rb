@@ -19,12 +19,19 @@ class Ke2daira::Ke2dairanizer
 
     return yomis[0] if yomis.length == 1
 
-    first_word = yomis[0]
-    last_word = yomis[-1]
+    first_word_moras = ::Ke2daira::Kana2Mora.katakana2mora(yomis[0])
+    first_word_head = first_word_moras[0]
+    first_word_tail = first_word_moras[1..]
 
-    # swap first characters of first and last name
-    yomis[0] = last_word[0] + first_word[1..]
-    yomis[-1] = first_word[0] + last_word[1..]
+    last_word_moras = ::Ke2daira::Kana2Mora.katakana2mora(yomis[-1])
+    last_word_head = last_word_moras[0]
+    last_word_tail = last_word_moras[1..]
+
+    new_first_word = last_word_head + first_word_tail.join
+    new_last_word = first_word_head + last_word_tail.join
+
+    yomis[0] = new_first_word
+    yomis[-1] = new_last_word
     yomis.join(separator)
   end
 

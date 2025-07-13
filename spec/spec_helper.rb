@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "parameterized_testing/rspec"
 require "ke2daira"
 
 RSpec.configure do |config|

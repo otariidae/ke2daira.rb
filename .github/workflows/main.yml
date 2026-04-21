@@ -12,11 +12,16 @@ jobs:
     runs-on: ubuntu-latest
     name: Ruby ${{ matrix.ruby }}
     strategy:
+      fail-fast: false
       matrix:
         ruby:
           - '3.2'
           - '3.3'
           - '3.4'
+          - '3.5'
+          - '4.0'
+          - head
+    continue-on-error: ${{ matrix.ruby == 'head' }}
 
     steps:
     - uses: actions/checkout@v3
